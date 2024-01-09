@@ -28,18 +28,19 @@ function generatePassword(){
   var consolidatedArr = [];
 
   //Input from the user
-  let passLength = prompt("how many characters of  password would you like generate?,You can Choose between 8 to 128");
+  let passLength = prompt("How many characters of  password would you like to generate?You can Choose between 8 to 128");
   
   //Password length must be numeric and between value 8 to 128
   if (isNaN(passLength)){
     alert("Password length must be a number. Try again!");
     return;
   } else if (passLength < 8 || passLength > 128) {
-    alert("Password length can be only between 8 to 128 characters.Try again!");
+    
+    alert("Password length can be only between 8 to 128 characters.Try again please!");
   return;
   };
 
-// getting combinations of character preferences and building characters set 
+//Combinations of character preferences and building of characters set:
 
   let choiceCap = "Would you like to include upper case letters in your password?";
   prefCap = confirm(choiceCap);
